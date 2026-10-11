@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>By Sofi World</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<img class="bg" src="img/fondo.jpg" alt="" onerror="this.remove()">
+<div class="veil"></div>
+<header><h1>By Sofi World</h1><p>Cambia el scroll por 13 minutos de aprender algo nuevo.</p></header>
+<main>
+<section id="s-wheel" class="on">
+<div class="reel" id="ww" role="button" aria-label="Girar el carrete de temas"><div class="strip" id="strip"></div></div>
+<button id="spin">Girar el carrete</button>
+<p class="hint">Toca el carrete o pulsa la barra espaciadora. Elige qué temas juegan (desliza para ver todos):</p>
+<div class="chips" id="chips"></div>
+<button class="ghost" id="hbtn">Ver mi historial</button>
+</section>
+
+<section id="s-topic">
+<div class="card">
+<div class="emoji" id="t-emoji"></div>
+<p id="t-cat"></p>
+<h2 id="t-name"></h2>
+<ul id="t-tips"></ul>
+<div class="note" id="t-note" hidden>Es un tema sensible. Si te toca de cerca, habla con una persona de confianza o con un profesional de salud mental.</div>
+</div>
+<button id="start-research">Empezar a investigar (8 min)</button>
+<div class="row"><button class="ghost" id="resub">Otro subtema</button><button class="ghost" id="again1">Girar otra vez</button></div>
+</section>
+
+<section id="s-timer">
+<span class="phase" id="phase"></span>
+<div class="topic-mini" id="mini"></div>
+<div class="ring" id="ring">
+<svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="54" fill="none" stroke="var(--soft)" stroke-width="10"/><circle id="arc" cx="60" cy="60" r="54" fill="none" stroke="var(--main)" stroke-width="10" stroke-linecap="round" stroke-dasharray="339.3" stroke-dashoffset="0"/></svg>
+<div class="t" id="clock">08:00</div>
+</div>
+<div class="row">
+<button class="ghost" id="pause">Pausar</button>
+<button class="ghost" id="plus">+1 min</button>
+<button id="skip">Pasar a hablar</button>
+</div>
+<div class="panel"><h3>Ideas por cubrir</h3><div id="chk"></div></div>
+<div class="panel"><h3>Mis notas</h3><textarea id="notes" placeholder="Anota aquí lo que vayas descubriendo. Te acompañan cuando hables."></textarea></div>
+</section>
+
+<section id="s-hist">
+<div class="card"><h2>Mi historial</h2><p class="stats" id="h-count"></p><ul class="hist" id="h-list" style="max-height:55vh;overflow-y:auto"></ul></div>
+<div class="row"><button id="hback">Volver a la ruleta</button><button class="ghost" id="hclear">Borrar historial</button></div>
+</section>
+
+<section id="s-done">
+<div class="card"><div class="emoji">🎉</div><h2>¡Lo lograste!</h2><p>Hablaste 5 minutos sobre <b id="d-name"></b>.</p>
+<p class="stats" id="d-stats"></p><ul class="hist" id="d-hist"></ul></div>
+<button id="again2">Jugar otra vez</button>
+</section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
